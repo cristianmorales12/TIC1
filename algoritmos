@@ -1,0 +1,193 @@
+Inicio proyectodejuegos{
+	Escribir Menu;
+	Escribir 1. juego de ahorcado; 
+	Escribir 2. JUegos de Basketball;
+	Escribir 3. Juego de cartas;
+	Escribir 4. JUegos de Hanoi;
+	Escribir 5. EScriba el codigo del juego que desea jugar;
+
+
+		var selelccionarUnaletra;
+		var continuar;
+		var hasadivinadolapalabra;
+		var aportunidades;
+		var errores =0;
+		var ganar;
+
+
+		Escribir "Este juego consiste que un segundo jugador debe de Escribir una palabra y el jugador principal tiene que adivinar la palbara que escribio el segundo jugador";
+		EScribir  "Escribe una palabra";
+		si{
+			palabra = guardar.readLine();
+			}sino;
+			seleccionarUnaletra = letraadivinar.length;
+			continuar = palabra.length;
+			errores=0;
+			si{
+			EScribir "Adivine la palbra o escriba una letra lo que escribio el segundo jugador";
+				letraAdivinar =guardar.readLine();
+			}sino
+			seleccionarUnaLetra = letraAdivinar.length();
+			continuar = palabra.length();
+			errores=0;
+			si(seleccionar una letra ==1){
+				si(var i=0 ; i < continuar ; ++1{
+					si (letraAdivinar.charAt(0) == palabra.charAt(i)){
+
+						Escibir (palabra.charAt(i));
+						ganar++;
+						si(ganar == continuar){
+							Escribir "has adivinado la palabra";
+							hasadivinadolapalabra=1;
+						}
+					}
+					sino{
+						errores++;
+						si(errores==continuar){
+							aportunidades++;
+						}
+
+					}
+				}
+
+			}
+			sino {
+			si(letraAdivinar.equalsIgnoreCase(palabra) == verdadero){
+			escribir ("Has adivinado la palabra" + letraAdivinar)
+			hasadivinadolapalabra 01;
+			}
+			sino {
+				aportunidades++;
+			}
+
+		}
+		 si(aportunidades == 1){
+                DibujarLaViga();	
+            } 
+            si(aportunidades == 2){
+                DibujarLaViga();
+                PonerElLazo();
+            }
+            si(aportunidades == 3){
+                DibujarLaViga();
+                PonerElLazo();
+                DibujarLaCabezaDelHombre();
+            }
+             si(aportunidades == 4){
+                DibujarLaViga();
+                PonerElLazo();
+                DibujarLaCabezaDelHombre();
+                DibujarElGargantaDelHombre();
+            }
+            si(aportunidades == 5){ 
+                DibujarLaViga();
+                PonerElLazo();
+                DibujarLaCabezaDelHombre();
+                DibujarElGargantaDelHombre();
+                DibujarLasManosDelHombre();
+            }
+             si(aportunidades == 6){ 
+                DibujarLaViga();
+                PonerElLazo();
+                DibujarLaCabezaDelHombre();
+                DibujarElGargantaDelHombre();
+                DibujarLasManosDelHombre();
+                DibujarElcuerpoDelHombre();
+            }
+            si(aportunidades == 7){
+            DibujarLaViga();
+            PonerElLazo();
+            DibujarLaCabezaDelHombre();
+            DibujarElGargantaDelHombre();
+            DibujarLasManosDelHombre();
+            DibujarElcuerpoDelHombre();
+            DibujarLosPiesDelHombre(); 
+            hasadivinadolapalabra=1;
+            Escribir("Has perdido el juego la palabra adivinar era "  + palabra);
+            }
+         
+       	    }finsi(hasadivinadolapalabra==0);
+	    }
+   	    Leer DibujarLaViga(){
+            EScribir("  ________ ");
+  	    }
+            Leer  PonerElLazo(){
+	    Escribir (" |       |   ");
+            Escribir(" |       _  ");
+        }
+            Leer DibujarLaCabezaDelHombre(){
+            Escribir(" |      (_)");
+        }	
+           Leer DibujarElGargantaDelHombre(){
+	   Escribir" |       * ");
+	}
+           Leer DibujarLasManosDelHombre(){
+	   Escribir(" |      xlx");
+	}
+           Leer void DibujarElcuerpoDelHombre(){
+	   Escribir(" |       l");
+	}
+           Leer DibujarLosPiesDelHombre(){
+           Escribir(   " |      xlx");
+           Escribir(   " |  ");
+	}
+ 
+    }
+
+	}
+	sino (Menu ==2);
+		var numero = 0;
+		var primeracarta = 0;
+		var segcarta = 0;
+		var Apostar = 0;
+		var tercarta = 0;
+		Escribir ("Este juego consiste en sacar dos cartas y adivinar una carta o el numero que esta dentro las dos cartas anteriores y el jugador debe ver la posibilidad que hay 			para lograr sacar ala carta que hay en el rango y asi va apostando el juego se ter,ima hasta que el jugador se queda sin dinero");
+		Escribir ("Cuanto Dinero Total desea apostar en este Juego");
+		numero = guardar.nextInt();
+		si{
+		 aletoria = new Random();aletoria cartaaleatoria = new aleatoria();
+       segcarta = cartaaleatoria.nextInt(13)+1;
+       primercarta = aleatoria.nextInt(13)+1;
+       
+       Escribir("su primera carta ");
+       EScribir(primercarta);
+       aleatoria ctr = new aleatoria();
+       segcarta = ctr.nextInt(13)+1;
+       Escribir("su segunda carta");
+       si (aleatoria== cartaaleatoria){
+        si{
+           aleatoria alea = new aleatoria();
+        primercarta = alea.siguentevariable(13)+1;
+        Escribir("su segunda carta ");
+        Escribir(primercarta); 
+        }Mientras(aleatoria== cartaaleatoria);
+       }
+       sino{
+         Escribir("su segunda carta ");  
+        Escribir(segcarta);
+       
+       }
+       Escribir("Cuanto desea Apostar");
+       Apostar= guardar.siguentevariable();
+       si{
+       tercarta = aleatoria.siguentevariable(13) +1;
+       }Finsi((segcarta == tercarta) && (tercarta == primercarta) || (primercarta == tercarta) || (tercarta == segcarta));
+       Escribir("su tercera carta");
+       EScribir(tercarta);
+       
+       
+       
+      si ((segcarta <= tercarta) && (tercarta <= primercarta) || (primercarta <= tercarta) && (tercarta <= segcarta)){
+          
+         	 numero = numero + Apostar;
+           	 Escribir("Ganastes ahora el total de  tu Dinero es de " + numero);
+     	 }sino{
+      	numero = numero - Apostar; 
+      	Escribir("perdiste por lo tanto ahora te quedan " + numero +" de dinero");
+      	}
+   	 }Finsi (numero!=0);
+       
+ 
+    }
+		
+}
